@@ -40,7 +40,7 @@ def main():
             st.chat_message("user").write(question)
             related_documents = vector_store.similarity_search(question, k=3)
             answer = answer_question(question, related_documents)
-            st.chat_message("assistant").write(answer.content)
+            st.chat_message("assistant").write(answer)
             
 
 if __name__ == "__main__":
