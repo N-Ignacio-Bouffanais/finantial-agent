@@ -1,5 +1,5 @@
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 import os
 
 def initialize_vector_store(documents):
@@ -9,4 +9,4 @@ def initialize_vector_store(documents):
         embedding=embeddings,
         persist_directory="./chroma_db"
     )
-    return vector_store.as_retriever()
+    return vector_store
