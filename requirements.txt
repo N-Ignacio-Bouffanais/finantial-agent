@@ -1,0 +1,16 @@
+#langchain
+langchain-core
+langchain-community
+langchain-ollama
+chromadb
+pdfplumber
+
+#fastapi
+fastapi[all]
+uvicorn[standard]
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+
+#general
+python-dotenv
