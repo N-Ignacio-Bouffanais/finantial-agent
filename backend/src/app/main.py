@@ -11,4 +11,4 @@ app.include_router(llm.router, prefix="/ask", tags=["llm"])
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host=settings.HOST, port=settings.PORT)
+    uvicorn.run(app, host=settings.host, port=settings.port)
