@@ -1,7 +1,0 @@
-langchain-core
-langchain-community
-streamlit
-chromadb
-python-dotenv
-pdfplumber
-langchain-ollama
