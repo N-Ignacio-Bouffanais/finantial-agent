@@ -11,6 +11,10 @@ uvicorn[standard]
 python-jose[cryptography]
 passlib[bcrypt]
 pydantic
+pydantic-settings
+sqlalchemy
+asyncpg 
+alembic
 
 #general
 python-dotenv
