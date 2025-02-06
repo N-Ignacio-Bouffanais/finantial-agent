@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+from schemas.user import UserCreate
 
 
 router = APIRouter()
@@ -9,11 +10,11 @@ async def login():
 
 
 @router.post("/register", tags=["authentication"])
-async def register():
-  #Buscar el usuario si existe en la base de datos
-  pass
-  
+async def register(user: UserCreate):
+  return user.email
+    
+
+
 @router.post("/newpass", tags=["authentication"])
 async def newpass():
   pass
-  
