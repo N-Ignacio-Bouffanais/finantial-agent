@@ -15,3 +15,11 @@ class UserCreate(BaseModel):
                 "La contraseña debe contener al menos un carácter especial."
             )
         return value
+
+
+class UserResponse(BaseModel):
+    id: int
+    email: EmailStr
+
+    class Config:
+        orm_mode = True
