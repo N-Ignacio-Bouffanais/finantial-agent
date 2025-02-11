@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from schemas.user import UserCreate
+from src.schemas.schema import UserCreate
 
 
 router = APIRouter()

@@ -1,9 +1,11 @@
-from fastapi import APIRouter
-
+from fastapi import APIRouter, Body
+from src.schemas.schema import ChatRequest
 
 router = APIRouter()
 
-@router.post('/ask', tags=["llm"])
 
-async def ask_question(question: str):
-  return {"response": "Esto es lo que yo puedo responder acerca de:" + question}
+@router.post("/", tags=["llm"])
+async def chat_endpoint(
+    request: ChatRequest = Body(...),
+):  # 📌 Forzar lectura del body JSON
+    return {"message": f"Recibido: {request.question}"}

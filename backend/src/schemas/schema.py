@@ -23,3 +23,8 @@ class UserResponse(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class ChatRequest(BaseModel):
+    question: str
+    #user_id: int

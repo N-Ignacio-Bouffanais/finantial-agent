@@ -1,5 +1,10 @@
 from pydantic_settings import BaseSettings
 from pydantic import Field
+import os
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde `.env`
+load_dotenv()
 
 class Settings(BaseSettings):
     financial_api_key: str = Field(..., env="FINANCIAL_API_KEY")
@@ -11,7 +16,8 @@ class Settings(BaseSettings):
     port: int = Field(8000, env="PORT")
 
     class Config:
-        env_file = "../.env"
+        from_attributes = True
+        env_file = os.path.join(os.path.dirname(__file__), "..", ".env")
         env_file_encoding = "utf-8"
         extra = "allow"
 
