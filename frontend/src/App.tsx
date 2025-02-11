@@ -19,8 +19,8 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <h1 className="text-3xl font-bold underline bg-amber-400 p-2">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-300 p-4">
+      <h1 className="text-3xl font-bold underline p-2">
         Chat con RAG y LangChain
       </h1>
 

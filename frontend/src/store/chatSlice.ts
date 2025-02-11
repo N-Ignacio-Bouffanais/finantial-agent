@@ -22,7 +22,7 @@ export const sendMessage = createAsyncThunk(
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/chat/",
-        { question: message }, // 📌 Asegúrate de enviar un JSON con "question"
+        { question: message },
         { headers: { "Content-Type": "application/json" } }
       );
       return response.data;
