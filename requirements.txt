@@ -4,6 +4,7 @@ langchain-community
 langchain-ollama
 chromadb
 pdfplumber
+langchain_chroma
 
 #fastapi
 fastapi[all]
