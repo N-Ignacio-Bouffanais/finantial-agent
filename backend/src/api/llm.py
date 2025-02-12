@@ -1,5 +1,9 @@
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, File, HTTPException
+from src.services.pdf_processor import process_pdf
+from src.services.rag_service import answer_question
+from src.services.vector_store import initialize_vector_store
 from src.schemas.schema import ChatRequest, QuestionRequest, AnswerResponse
+from fastapi import UploadFile
 
 router = APIRouter()
 
@@ -32,4 +36,3 @@ async def ask_question(request: QuestionRequest):
         return {"answer": answer}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-

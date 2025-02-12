@@ -5,6 +5,9 @@ from fastapi import UploadFile
 
 
 def process_pdf(uploaded_file: UploadFile):
+    if not uploaded_file.filename:
+        raise ValueError("El archivo subido no tiene un nombre válido.")
+
     pdf_directory = os.path.abspath(
         os.path.join(os.path.dirname(__file__), "..", "..", "pdf")
     )
