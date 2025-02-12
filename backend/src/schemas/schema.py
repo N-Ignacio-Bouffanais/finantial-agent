@@ -27,4 +27,12 @@ class UserResponse(BaseModel):
 
 class ChatRequest(BaseModel):
     question: str
-    #user_id: int
+    # user_id: int
+
+
+class QuestionRequest(BaseModel):
+    question: str
+
+
+class AnswerResponse(BaseModel):
+    answer: str

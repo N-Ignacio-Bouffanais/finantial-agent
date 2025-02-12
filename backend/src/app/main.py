@@ -4,7 +4,10 @@ from src.api import auth, llm
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI(title="Finantial Api Agent", description="This is an API for LLM langchain project")
+app = FastAPI(
+    title="Finantial Api Agent",
+    description="API para procesamiento de preguntas con RAG y LangChain",
+)
 
 app.add_middleware(
     CORSMiddleware,
